@@ -24,6 +24,9 @@ var name = 'Vasya';
     const task = false;
     var line = 12;
 }
+
 console.log(line);
 console.log(result);
 console.log(task);
+// const и let существуют внутри чего то и добраться к ним можно только оттуда где они созданы
+// var же существует везде
