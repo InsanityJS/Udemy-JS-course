@@ -1,3 +1,4 @@
+"use strict";
 /* Задание на урок:
 1) Первую часть задания повторить по уроку
 2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
@@ -43,6 +44,15 @@ function rememberMyFilms() {
 
 rememberMyFilms();
 
+
+function detectPersonalLevel() {
+    
+    if (numberOffilms < 10) {
+    console.log("Просмотрено довольно мало фильмов");
+    }
+    }
+rememberMyFilms();
+
 function detectPersonalLevel() {
     if (numberOffilms < 10) {
         console.log("Просмотрено довольно мало фильмов");
@@ -57,12 +67,36 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
+// function showMyDB () {
+//     if (personalMovieDb.privat == false) {
+//         console.log(personalMovieDb);
+//     } else {
+//         console.log("Hide database");
+//     }
+    
+// }
+
+
+detectPersonalLevel();
+
 function showMyDB(hidden) {
     if (!hidden) {
+
         console.log(personalMovieDb);
     }
 }
 showMyDB(personalMovieDb.privat);
+
+function writeYourGenres () {
+
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDb.genres[i - 1] = genre;
+    }
+}
+
+writeYourGenres();
+
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
@@ -70,3 +104,4 @@ function writeYourGenres() {
     }
 }
 writeYourGenres();
+
