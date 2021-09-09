@@ -1,11 +1,46 @@
-'use strict';
+"use strict";
 
-//! Синтаксис: обьвялем словом functin затем название, далее аргументы ()
+//! Синтаксис: обьвялем словом functin затем название, далее аргументы () аргументов может быть много задаються они через запятую
 //! и тело функции {}
 
-function showFirstMessage() {
-    console.log('Hello World!');
+//function showFirstMessage() {
+//    console.log("Hello World!");
+//}
+let num = 40;
+function showFirstMessage(text) {
+    console.log(text);
+    num = 20; //* переменнная которая создана внутри функции, называется локальной и существует она только внутри функции в которой создана
+    //* но переменные которые созданны глобально(не в функции) в самой функции можено переприсваивать
+    //* может существовать несколько одинаковых переменных( с одним названием) одна будет глоабальная, а другие будут локальные
 }
+
+console.log(num);
+
 //* Функция просто существует в коде, чтобы она заработало, ее нужно вызвать
 
-showFirstMessage
+showFirstMessage("Hello world!");
+
+function calc(a, b) {
+    //* function declaration в таком виде функция существует мзначальноЮ в самом начале кода
+    return a + b; //* позволяет вернуть данные из функции на глобальный уровень
+}
+console.log(calc(5, 12));
+console.log(calc(33, 7));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function () {
+    //* function expression в таком виде функция начинает существовать когда до нее дойдет считывание кода
+};
+
+//! стрелочная функция существует со стандарта ES6
+
+//const calc = (a, b) => {
+//    return a + b;
+//};
