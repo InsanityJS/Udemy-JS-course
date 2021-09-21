@@ -3,9 +3,10 @@
 const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
       circles = document.getElementsByClassName('circle'),
-      hearts = document.querySelectorAll('.heart'),
-      oneHeart = document.querySelector(".heart"),
-      wrapper = document.querySelector(".wrapper");
+      wrapper = document.querySelector(".wrapper"),
+      hearts = wrapper.querySelectorAll('.heart'), //* Имея доступ к родителю через document, для єелементов внутри его мы можем указывать родителя и не document
+      oneHeart = wrapper.querySelector(".heart");
+      
 
 
 // box.style.backgroundColor = "blue"; //* Таким образом можно изменить стиль выбраного элемента
@@ -62,6 +63,6 @@ div.innerHTML = "<h1>Hello</h1>"; //* Добавляет на нашу стра�
 // div.textContent = "ganab"; //* Добавляет на нашу страницу в выбраный элемент текст
 
 // div.insertAdjacentHTML("beforebegin", "<h2>test</h2>"); //* Добавляет структуру перед элементом
-div.insertAdjacentHTML("beforeend", "<h2>test</h2>"); //* Добавляет структуру после элемента
+// div.insertAdjacentHTML("beforeend", "<h2>test</h2>"); //* Добавляет структуру в конце элемента
 // div.insertAdjacentHTML("afterbegin", "<h2>test</h2>"); //* Добавляет структуру в начале эелемента
-// div.insertAdjacentHTML("afterend", "<h2>test</h2>"); //* Добавляет структуру в конце элемента
+// div.insertAdjacentHTML("afterend", "<h2>test</h2>"); //* Добавляет структуру после элемента
