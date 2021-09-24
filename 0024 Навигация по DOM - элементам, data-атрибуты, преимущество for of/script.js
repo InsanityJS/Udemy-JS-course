@@ -13,6 +13,7 @@
 // console.log(document.querySelector('[data-current="3"]').nextElementSibling); //* следующий элемент
 // console.log(document.querySelector('[data-current="3"]').previousElementSibling); //* предыдущий элемент
 
+//! Благодаря этому методу мы перебрали  document.body.childNodes и он нам показал только внутренние элементы без нодов
 for (let node of document.body.childNodes) {
         if (node.nodeName == "#text") {
             continue;
