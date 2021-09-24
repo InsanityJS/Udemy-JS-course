@@ -8,7 +8,7 @@ console.log(p);
 // script.src = "js/test.js";
 // script.async = false;
 // document.body.append(script);
-
+//! Создали функцию с помощью которой можно создавать динамические скрипты и так мы проверилии как загружаются они, строго по порядку
 function loadScript(src) {
     const script = document.createElement('script');
     script.src = src;
